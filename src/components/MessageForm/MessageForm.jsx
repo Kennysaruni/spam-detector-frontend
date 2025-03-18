@@ -30,6 +30,24 @@ const MessageForm = () => {
         }
     }
 
+    const sendFeedback = async() => {
+        try{
+            await fetch('http://localhost:5000/feedback', {
+                method : 'POST',
+                headers : {
+                    'Content-Type' : 'application.json'
+                },
+                body: JSON.stringify({
+                    message: message,
+                    prediction: result
+                }),
+            });
+            alert('Your feedback has been recorded')
+        } catch(error){
+            console.error("Error:" , error)
+        }
+    }
+
 
     return (
         <div className='form-container'>
@@ -46,10 +64,10 @@ const MessageForm = () => {
                     </h2>
                     {result &&
                         <div className="check-buttons">
-                            <button className='right'>
+                            <button className='right' onClick={sendFeedback}>
                                 <img src={tick} alt="" />
                             </button>
-                            <button className='wrong'>
+                            <button className='wrong' onClick={sendFeedback}>
                                 <img src={wrong} alt="" />
                             </button>
                         </div>
