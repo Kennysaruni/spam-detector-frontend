@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    top: -70px;
+}
+
+.title-question{
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 448px;
+    height: 144px;
+    border: 1px solid #D1DBE8;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.submit-button{
+    background-color: #1A80E5;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 448px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+
+.result-form-container{
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+}
+
+.result-div{
+    /* background-color: black; */
+    color: black;
+}
+
+.result.spam{
+    color: red;
+}
+
+.result.ham{
+    color: #1A80E5;
+}
+
+.check-buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.check-buttons button{
+    background-color: white;
+}
+
+
+
